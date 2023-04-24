@@ -1,0 +1,9 @@
+<br><br>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombre">
+  <br>
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" [(ngModel)]="edad">
+  <br>
+  <button [routerLink]="['/recibovarios',this.nombre,this.edad]"[queryParams]="{accions:nombre,edad}">Pasar</button>
+<router-outlet></router-outlet>

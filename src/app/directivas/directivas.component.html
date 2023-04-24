@@ -1,0 +1,19 @@
+<br><br>
+<h1>Ejemplo de ngIf, ngFor y ngSwitch</h1>
+<div *ngIf="mostrarDiv">
+  <p>Este div se muestra si mostrarDiv es verdadero.</p>
+</div>
+<button (click)="cambiarVerdadero()">Verdadero / Falso</button>
+<ul>
+  <li *ngFor="let color of colores">
+    {{ color }}
+  </li>
+</ul>
+<input type="number" [(ngModel)]="colorSeleccionado">
+<div [ngSwitch]="colorSeleccionado">
+  <p *ngSwitchCase="1">Seleccionaste Rojo</p>
+  <p *ngSwitchCase="2">Seleccionaste Verde</p>
+  <p *ngSwitchCase="3">Seleccionaste Azul</p>
+  <p *ngSwitchCase="4">Seleccionaste Amarillo</p>
+  <p *ngSwitchDefault>No has seleccionado ningún color</p>
+</div>
